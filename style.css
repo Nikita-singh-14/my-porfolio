@@ -359,7 +359,7 @@ footer a {
   }
   
 
-@media only screen and (max-width:450px){
+@media only screen and (max-width:550px){
     header .logo{
         font-size: 1.2rem;
     } 
@@ -495,43 +495,6 @@ footer a {
   
 }
 
-
-
-
-  /*.container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-    justify-content: center;
-    margin-left: 45%;
-    
-  }
-  
-  h1 {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  
-  
-  p {
-    margin-top: 15px;
-  }*/
 
 
   .container {
