@@ -14,10 +14,10 @@ hamburger.onclick=function(){
 
 
 
-boxes.forEach(box => {
+/*boxes.forEach(box => {
   box.addEventListener('mouseover', () => {
     box.style.transform = 'scale(1.1)';
-    box.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)';
+    box.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.1)';
   });
 
   box.addEventListener('mouseout', () => {
@@ -49,4 +49,4 @@ photo.addEventListener('mouseover', () => {
 photo.addEventListener('mouseout', () => {
   photo.style.transform = 'scale(1)';
   photo.style.boxShadow = 'none';
-});
+});*/

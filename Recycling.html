@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recycling</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><img src="e-waste-removebg-preview.png" alt=""></div>
+    <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <nav class="nav-bar">
+        <ul>
+            <li>
+                <a class="active" href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+            <li>
+                <a href="Recycling.html">Recycling</a>
+            </li>
+            <li>
+                <a href="login.html">SighUp</a>
+            </li>
+        </ul>
+        </div>
+</header>
+  <div class="container">
+    <h1>Recycling</h1>
+    <form id="recycleForm">
+      <label for="item">Item to Recycle:</label>
+      <input type="text" id="item" name="item" required>
+      <label for="item">Quantity:</label>
+      <input type="text" id="item" name="item" required>
+      <label for="item">Material:</label>
+      <input type="text" id="item" name="item" required>
+      
+      <button type="submit">Submit</button>
+    </form>
+    <p id="response"></p>
+  </div>
+  <footer>
+    <div class="top space">
+        <div class="cont">
+            <p>Contact Information</p>
+            <h3>Email:nk2371174@gmail.com</h3>
+            <h3>phone:(+91)8789803241</h3>
+        </div>
+        <div class="link">
+            <h3>connect with E-Scrapo</h3>
+            <div class="icon">
+                <a href="https://www.instagram.com/nikitasingh14434/profilecard/?igsh=Y2hjZW9ndTJhcXo1">
+                    <i class="fa-brands fa-instagram"></i></a>
+                <a
+                    href="https://www.linkedin.com/in/nikita-singh-3560652bb?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                    <i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Nikita-singh-14"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="bottom space">
+        <p>@ 2025 Nikita Singh. All Rights Reserved.</p>
+        <p>Privacy Policy Term & Conditions</p>
+    </div>
+</footer>
+  <script>
+    document.getElementById('recycleForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const item = document.getElementById('item').value;
+
+      // Send data to the server
+      fetch('/recycle', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ item }),
+      })
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('response').innerText = data.message;
+        });
+    });
+  </script>
+</body>
+</html>
